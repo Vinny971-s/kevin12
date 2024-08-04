@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+:root {
+--primaryTextColor:#23235;
+--secondaryTextColor: #656d72; 
+--borderColor:#F1F1F1;
+--lineColor:#d9d9d9;
+--primaryBackgroundColor:#fff;
+--secondaryBackgroundColor:#fbfbfb;
+--thirdBackgroundColor:#f5f3fe;
+--primaryIconColor:#7e74f1;
+--primaryIconColorHover:#5d51e8;
+--sectionPadding: 6rem 0;
+--itemBorderRadius: 0.7rem;
+--color-tertiary: #415286;
+
+  --shadow: 6px 6px 12px #bababa, -6px -6px 12px #ffffff;
+  --inner-shadow: inset 6px 6px 12px #bababa, inset -6px -6px 12px #ffffff;
+ 
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Roboto",sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6, strong{
+color: var(--primaryTextColor);
+}
+p {
+font-size: 1.5rem;
+line-height: 1.9rem;
+}
+p, span, label, input, textarea, li {
+color: var(--secondaryTextColor);
+}
+a {
+    text-decoration: none;
+}
+.main-container{
+    width: 1200px;
+    margin: 2rem auto;
+}
+@media screen and (max-width: 1200px){
+.main-container{
+    width: 90%;
+}
+}
+.btn{
+    padding: 1rem 1.5rem;
+    background: white;
+    border:1.5px solid var(--borderColor);
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+.btn:hover{
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+}
+.section-title{
+    margin: 1rem 0 4rem;
+    font-size: 2rem;
+}
+.pre-title{
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    color: var(--secondaryTextColor);
+    position: relative;
+    padding-left: 40px;
+    width: fit-content;
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+.pre-title::before{
+    content: "";
+    width: 30px;
+    height: 1px;
+    background: var(--lineColor);
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 50%;
+}
+.grid-3{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+}
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem, 0;
+}
+.nav ul{
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 2rem;
+}
+.logo a{
+    color: var(--primaryTextColor);
+}
+nav ul li{
+    display:flex;
+    align-items: center;
+}
+
+nav ul li a{
+    color: var(--primaryTextColor);
+}
+#home{
+    height: 720px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.home-nama {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0.5rem 0 1rem;
+}
+.home-nama span{
+    color: var(--primaryIconColor);
+}
+.home-right img{
+    width: 70%;
+}
+.home-right{
+    display: flex;
+    justify-content: center;
+}
+
+#about {
+    background-color: var(--secondaryBackgroundColor);
+    padding: var(--sectionPadding);
+}
+.about .pre-title{
+    margin: 0 auto;
+}
+.about-title{
+    text-align: center;
+}
+.aboutt{
+    padding: 3rem 2rem;
+    text-align: center;
+    background: var(--primaryBackgroundColor);
+    border-radius: var(--itemBorderRadius);
+}
+.aboutt h4{
+    margin: 1.5rem 0;
+    font-weight: 500;
+    font-size: 1.05rem;
+}
+.about-icon{
+    background:var(--thirdBackgroundColor);
+    width: fit-content;
+    margin: 0 auto;
+    padding: 1rem 1.3rem;
+    border-radius: 0.5rem;
+}
+.about-icon svg{
+    fill: var(--primaryIconColor);
+}
+#contact{
+padding: var(--sectionPadding);
+}
+.contact{
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+gap: 3rem;
+}
+.contact-form div{
+margin-bottom: 1.4rem;
+}
+
+.contact-form input, .contact-form textarea {
+width: 100%;
+padding: .75rem 1.3rem;
+font-family: "Roboto", sans-serif;
+background: var(--secondaryBackgroundColor);
+border: 1px solid var(--borderColor);
+border-radius: 3px;
+resize: none;
+}
+
+.contact-form input::placeholder, .contact-form textarea::placeholder{
+color: #9d9fa1;
+}
+.contact-form input:focus,
+.contact-form textarea:focus{
+outline: none;
+border: 1px solid #7d7d7d;
+}
+.btn-submit{
+width: 100%;
+padding: .75rem 1.3rem;
+background-color: var(--primaryIconColor);
+color: #fff;
+border: none;
+border-radius: 3px;
+cursor: pointer;
+transition: .2s ease-in-out;
+}
+.btn-submit:hover {
+background: var(--primaryIconColorHover);
+}
+
+.contact-item-icon{
+    background: var(--thirdBackgroundColor);
+    width: 40px;
+    height: 40px;
+    border-radius: 9px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact-item-icon svg{
+    fill: var(--primaryIconColor);
+}
+
+
+
+
+
